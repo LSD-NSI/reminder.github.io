@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site de Rappels</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Rappels</h1>
+        
+        <!-- Formulaire pour ajouter un rappel -->
+        <form id="reminderForm">
+            <label for="reminderName">Nom de la tâche:</label>
+            <input type="text" id="reminderName" placeholder="Nom de la tâche" required>
+
+            <label for="reminderDate">Date et Heure:</label>
+            <input type="datetime-local" id="reminderDate" required>
+            
+            <label for="recurrence">Récurrence :</label>
+            <select id="recurrence" name="recurrence">
+                <option value="none">Aucune</option>
+                <option value="daily">Tous les jours</option>
+                <option value="weekly">Toutes les semaines</option>
+                <option value="monthly">Tous les mois</option>
+                <option value="yearly">Tous les ans</option>
+            </select>
+          
+            
+            <button type="submit">Ajouter un rappel</button>
+        </form>
+
+        <!-- Liste des rappels -->
+        <ul id="reminderList"></ul>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
